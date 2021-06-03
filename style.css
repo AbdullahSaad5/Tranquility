@@ -1,0 +1,95 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: white;
+    font-family: 'DM Sans', sans-serif;
+    color : white;
+}
+
+#gradient{
+    height: 30vh;
+    background-image: linear-gradient(to right, rgba(255, 95, 90, 0.85), rgba(255, 0, 101, 0.85));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#black{
+    height: 70vh;
+    background-color: #181a1b;
+    display: flex;
+    justify-content: center;
+
+}
+
+#top-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#login{
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+#comment{
+    font-size: 1.5rem;
+}
+
+#signIn-details{
+    margin: 50px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+form div{
+    width: 100%;
+}
+
+
+label{
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    padding-left: 1.5rem;
+    text-align: left;
+    margin-top: 30px;
+    color: #8f8e8e;
+    letter-spacing: 2px;
+}
+
+input{
+    width: 300px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #292828;
+    font-family: 'DM Sans', sans-serif;
+    margin-top: 5px;
+    border: none;
+    padding-left: 1.5625rem;
+    padding-right: 1.5625rem;
+    font-size: 1rem;
+    color: #8f8e8e;
+}
+
+
+#submit{
+    width: 150px;
+    text-align: center;
+    margin-top: 2.5rem;
+    background-color: #9d0012;
+    color: white;
+}
+
