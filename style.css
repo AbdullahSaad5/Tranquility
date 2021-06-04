@@ -1,16 +1,18 @@
-*, *::before, *::after{
+*,
+*::before,
+*::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-body{
+body {
     background-color: white;
     font-family: 'DM Sans', sans-serif;
-    color : white;
+    color: white;
 }
 
-#gradient{
+#gradient {
     height: 30vh;
     background-image: linear-gradient(to right, rgba(255, 95, 90, 0.85), rgba(255, 0, 101, 0.85));
     display: flex;
@@ -18,7 +20,7 @@ body{
     justify-content: center;
 }
 
-#black{
+#black {
     height: 70vh;
     background-color: #181a1b;
     display: flex;
@@ -26,7 +28,7 @@ body{
 
 }
 
-#top-div{
+#top-div {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -34,32 +36,30 @@ body{
 }
 
 
-#login{
+#login {
     font-size: 3rem;
     margin-bottom: 20px;
 }
 
-#comment{
+#comment {
     font-size: 1.5rem;
 }
 
-#signIn-details{
+#signIn-details {
     margin: 50px;
-}
-
-form{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 
-form div{
+
+#signIn-details div {
     width: 100%;
 }
 
 
-label{
+label {
     display: inline-block;
     text-transform: uppercase;
     font-size: 0.8rem;
@@ -70,7 +70,7 @@ label{
     letter-spacing: 2px;
 }
 
-input{
+input {
     width: 300px;
     height: 40px;
     border-radius: 20px;
@@ -84,12 +84,12 @@ input{
     color: #8f8e8e;
 }
 
-input:focus{
+input:focus {
     outline: none;
 }
 
 
-#submit{
+#submit {
     width: 150px;
     text-align: center;
     margin-top: 2.5rem;
@@ -97,3 +97,6 @@ input:focus{
     color: white;
 }
 
+#submit:hover {
+    background-color: #b83f4d;
+}

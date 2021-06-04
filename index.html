@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +10,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
     <link rel="icon" href="images/therapy.svg">
+    <script src="script.js"></script>
 </head>
+
 <body>
     <div id="gradient">
         <div id="top-div">
@@ -17,27 +20,23 @@
             <p id="comment">Sign in to continue</p>
         </div>
     </div>
-    <div id="black"> 
+    <div id="black">
         <div id="signIn-details">
-
-
-
-        <form action="post" autocomplete="off">
             <div>
-        <label for="email">Please Enter Your Email</label>
-    </div>
-        <br>
-        <input type="email" name="email" id="email" placeholder="Email" required>
-        <br>
-        <div>
-        <label for="password">Please Enter Your Password</label>
-    </div>
-        <br>
-        <input type="password" name="password" id="password" placeholder="Password" required>
-        <br>
-        <input type="submit" name="" id="submit" value="Login"> 
-        </form> 
-    </div>
+                <label for="email">Please Enter Your Email</label>
+            </div>
+            <br>
+            <input type="email" id="email" placeholder="Email" required>
+            <br>
+            <div>
+                <label for="password">Please Enter Your Password</label>
+            </div>
+            <br>
+            <input type="password" id="password" placeholder="Password" required>
+            <br>
+            <input type="submit" id="submit" value="Login" onclick="getCredentials()">
+        </div>
     </div>
 </body>
+
 </html>
