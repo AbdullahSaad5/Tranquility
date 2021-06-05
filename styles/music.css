@@ -74,7 +74,10 @@ body {
     width: 250px;
     background-image: url(../images/cd.svg);
     background-size: contain;
+    animation: rotation 5s infinite linear;
 }
+
+
 
 p {
     color: black;
@@ -97,6 +100,15 @@ p {
     background-color: black;
 }
 
+#render {
+    width: 5px;
+    height: 5px;
+    background-color: red;
+    animation: move 180s linear;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+
+}
 
 #music-control {
     width: 20%;
@@ -199,5 +211,26 @@ p {
     #other-control {
         width: 15%;
         margin-right: 5rem;
+    }
+}
+
+
+@keyframes rotation {
+    from {
+        -moz-transform: rotate(0deg);
+    }
+
+    to {
+        -moz-transform: rotate(359deg);
+    }
+}
+
+@keyframes move {
+    from {
+        width: 5px;
+    }
+
+    to {
+        width: 100%;
     }
 }
