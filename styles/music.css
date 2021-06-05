@@ -74,10 +74,10 @@ body {
     width: 250px;
     background-image: url(../images/cd.svg);
     background-size: contain;
-    animation: rotation 5s infinite linear;
-    -moz-animation: rotation 5s infinite linear;
-    -webkit-animation: rotation 5s infinite linear;
-    -ms-animation: rotation 5s infinite linear;
+    animation: rotation 5s infinite linear forwards;
+    -moz-animation: rotation 5s infinite linear forwards;
+    -webkit-animation: rotation 5s infinite linear forwards;
+    -ms-animation: rotation 5s infinite linear forwards;
     animation-play-state: paused;
 }
 
@@ -104,15 +104,15 @@ p {
 }
 
 #render {
-    width: 5px;
+    width: 0px;
     height: 5px;
     background-color: red;
     border-bottom-right-radius: 5px;
     border-top-right-radius: 5px;
-    animation: move 180s linear;
-    -ms-animation: move 180s linear;
-    -moz-animation: move 180s linear;
-    -webkit-animation: move 180s linear;
+    animation: move linear forwards;
+    -ms-animation: move linear forwards;
+    -moz-animation: move linear forwards;
+    -webkit-animation: move linear forwards;
     animation-play-state: paused;
 
 
@@ -250,7 +250,7 @@ p {
 
 @keyframes move {
     from {
-        width: 5px;
+        width: 0px;
     }
 
     to {
