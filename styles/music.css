@@ -192,6 +192,7 @@ p {
     }
 
     #music-control {
+        justify-content: space-between;
         width: 30%;
     }
 
