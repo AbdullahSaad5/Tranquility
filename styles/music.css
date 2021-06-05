@@ -17,7 +17,7 @@ body {
     margin-left: 2rem;
     font-size: 1.5rem;
     font-weight: bold;
-    background-image: url(images/therapy.svg);
+    background-image: url(../images/therapy.svg);
     background-repeat: no-repeat;
     background-size: contain;
     padding-left: 3rem;
@@ -72,7 +72,7 @@ body {
     margin-top: 2rem;
     height: 250px;
     width: 250px;
-    background-image: url(images/cd.svg);
+    background-image: url(../images/cd.svg);
     background-size: contain;
 }
 
@@ -98,11 +98,84 @@ p {
 }
 
 
-@media all and (max-width: 768px) {
+#music-control {
+    width: 20%;
+    height: 8vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+#music-control div {
+    height: 50px;
+    width: 50px;
+}
+
+
+#revert {
+    background-image: url(../images/skip.svg);
+    transform: rotateZ(180deg);
+}
+
+#play {
+    background-image: url(../images/play.svg);
+}
+
+#skip {
+    background-image: url(../images/skip.svg);
+}
+
+#other-control {
+    width: 10%;
+    height: 8vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 10rem;
+    align-items: center;
+}
+
+#other-control div {
+    height: 50px;
+    width: 50px;
+}
+
+#download {
+    background-image: url(../images/download.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#favorite {
+    background-image: url(../images/favorite.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+@media all and (max-width: 768px),
+(orientation: portrait) {
+
+    #cd {
+        height: 150px;
+        width: 150px;
+    }
+
     #buttons button {
         width: 120px;
         height: 30px;
         font-size: 0.8rem;
         font-weight: normal;
+    }
+
+
+    #buttons {
+        margin-right: 2rem;
+    }
+
+    #songtime {
+        width: 70%;
+        justify-content: space-between;
     }
 }
