@@ -75,7 +75,11 @@ body {
     background-image: url(../images/cd.svg);
     background-size: contain;
     animation: rotation 5s infinite linear;
+    -moz-animation: rotation 5s infinite linear;
+    -webkit-animation: rotation 5s infinite linear;
+    -ms-animation: rotation 5s infinite linear;
 }
+
 
 
 
@@ -217,10 +221,17 @@ p {
 
 @keyframes rotation {
     from {
+        transform: rotate(0deg);
         -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+
     }
 
     to {
+        transform: rotate(359deg);
+        -webkit-transform: rotate(359deg);
+        -ms-transform: rotate(359deg);
         -moz-transform: rotate(359deg);
     }
 }
