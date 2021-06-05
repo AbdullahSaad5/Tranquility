@@ -107,7 +107,8 @@ p {
 }
 
 
-#music-control div {
+#music-control div,
+#other-control div {
     height: 50px;
     width: 50px;
 }
@@ -116,14 +117,23 @@ p {
 #revert {
     background-image: url(../images/skip.svg);
     transform: rotateZ(180deg);
+    background-size: contain;
+    background-repeat: no-repeat;
+
 }
 
 #play {
     background-image: url(../images/play.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+
 }
 
 #skip {
     background-image: url(../images/skip.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+
 }
 
 #other-control {
@@ -137,10 +147,6 @@ p {
     align-items: center;
 }
 
-#other-control div {
-    height: 50px;
-    width: 50px;
-}
 
 #download {
     background-image: url(../images/download.svg);
@@ -154,7 +160,7 @@ p {
     background-repeat: no-repeat;
 }
 
-@media all and (max-width: 768px),
+@media all and (max-width: 900px),
 (orientation: portrait) {
 
     #cd {
@@ -177,5 +183,20 @@ p {
     #songtime {
         width: 70%;
         justify-content: space-between;
+    }
+
+    #music-control div,
+    #other-control div {
+        height: 35px;
+        width: 35px;
+    }
+
+    #music-control {
+        width: 30%;
+    }
+
+    #other-control {
+        width: 15%;
+        margin-right: 5rem;
     }
 }
