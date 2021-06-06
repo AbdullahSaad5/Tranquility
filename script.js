@@ -9,6 +9,6 @@ function getCredentials() {
         });
     } else {
         // alert("Invalid Username or Password");
-        swal("Error!", "Invald Username or Password", "error");
+        swal("Error!", "Invalid Username or Password", "error");
     }
 }
