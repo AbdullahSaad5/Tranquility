@@ -5,7 +5,10 @@
         play_button = document.querySelector('#play')
         document.querySelector('#ending').innerHTML = convertTime(audio.duration);
         document.getElementById("render").style.animationDuration = audio.duration.toString() + "s";
-        document.querySelector("#song-name p").innerHTML = audio.src;
+        var song_name = audio.src.split('/');
+        song_name = song_name[song_name.length - 1];
+        song_name = song_name.split(".");
+        document.querySelector("#song-name p").innerHTML = song_name[0];
 
         if (!audio.paused) {
             pause();
@@ -16,8 +19,7 @@
 
     function play() {
         if (Math.floor(audio.currentTime) == Math.floor(audio.duration)) {
-            document.getElementById("cd").style.animationPlayState = 'paused';
-            document.getElementById("render").style.animationPlayState = 'paused';
+            pause();
         } else {
             document.getElementById("cd").style.animationPlayState = 'running';
             document.getElementById("render").style.animationPlayState = 'running';
@@ -47,6 +49,17 @@
     function revert() {
         audio.paused = true;
         play_pause();
+    }
+
+
+    function seek() {
+        var streaming = document.getElementById('streamline');
+        streaming.onmousedown = function (e) {
+            var position = e.pageX - this.offsetLeft;
+            var totalPosition = document.getElementById("streamline").offsetWidth;
+            var seekingTime = audio.duration * (position / totalPosition);
+            audio.currentTime = seekingTime;
+        }
     }
 
     function convertTime(time) {
