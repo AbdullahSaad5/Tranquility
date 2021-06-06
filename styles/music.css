@@ -33,7 +33,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 20vh;
+    height: 15vh;
 }
 
 #buttons {
@@ -87,12 +87,23 @@ p {
     font-weight: bold;
 }
 
+#song-name {
+    width: 100%;
+    margin-top: 3rem;
+
+}
+
+#song-name p {
+    margin-left: 27%;
+    font-size: 1.2rem;
+}
+
 #songtime {
     display: flex;
     width: 60%;
     justify-content: space-evenly;
     align-items: center;
-    margin-top: 3rem;
+    margin-top: 1rem;
 
 }
 
@@ -221,6 +232,25 @@ p {
         width: 15%;
         margin-right: 5rem;
     }
+
+    #song-name p {
+        margin-left: 15%;
+    }
+
+}
+
+
+@media all and (max-width: 500px),
+(orientation: portrait) {
+    #cd {
+        height: 120px;
+        width: 120px;
+    }
+
+    #song-name p {
+        margin-left: 10%;
+        font-size: 1rem;
+    }
 }
 
 .paused {
@@ -229,6 +259,10 @@ p {
 
 .running {
     animation-play-state: running;
+}
+
+.restart {
+    animation-play-state: initial;
 }
 
 @keyframes rotation {

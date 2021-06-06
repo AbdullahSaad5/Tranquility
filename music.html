@@ -24,6 +24,9 @@
     <div id="player">
         <h1 id="music">Music</h1>
         <div id="cd"></div>
+        <div id="song-name">
+            <p>Song Name</p>
+        </div>
         <div id="songtime">
             <p id="starting">0:00</p>
             <div id="streamline">
@@ -32,9 +35,9 @@
             <p id="ending">0:00</p>
         </div>
         <div id="music-control">
-            <div id="revert"></div>
+            <div id="revert" onclick="revert()"></div>
             <div id="play" onclick="play_pause()"></div>
-            <div id="skip"></div>
+            <div id="skip" onclick="skip()"></div>
         </div>
         <div id="other-control">
             <div id="favorite"></div>
