@@ -118,16 +118,12 @@ p {
     width: 0px;
     height: 5px;
     background-color: red;
-    border-bottom-right-radius: 5px;
-    border-top-right-radius: 5px;
+    border-radius: 10px;
     animation: move linear forwards;
     -ms-animation: move linear forwards;
     -moz-animation: move linear forwards;
     -webkit-animation: move linear forwards;
     animation-play-state: paused;
-
-
-
 }
 
 #music-control {
@@ -261,10 +257,6 @@ p {
     animation-play-state: running;
 }
 
-.restart {
-    animation-play-state: initial;
-}
-
 @keyframes rotation {
     from {
         transform: rotate(0deg);
@@ -281,6 +273,7 @@ p {
         -moz-transform: rotate(359deg);
     }
 }
+
 
 @keyframes move {
     from {

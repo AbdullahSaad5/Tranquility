@@ -4,6 +4,7 @@ function getCredentials() {
 
     if (email == "test@test.com" && password == "test123") {
         // alert("Login Successful");
+        logged_in = true;
         swal("Success!", "Click OK to continue!", "success").then(function () {
             window.location.href = "music.html";
         });

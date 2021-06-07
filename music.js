@@ -1,3 +1,6 @@
+    if (!logged_in) {
+        window.location.href = "index.html";
+    }
     var audio = new Audio('Thoughts.mp3');
     var play_button;
 
@@ -18,16 +21,16 @@
     }
 
     function play() {
-        if (Math.floor(audio.currentTime) == Math.floor(audio.duration)) {
-            pause();
-        } else {
-            document.getElementById("cd").style.animationPlayState = 'running';
-            document.getElementById("render").style.animationPlayState = 'running';
-        }
+
+        document.getElementById("cd").style.animationPlayState = 'running';
+        document.getElementById("render").style.animationPlayState = 'running';
         setInterval(function () {
             var current = audio.currentTime;
-            document.getElementById("starting").innerHTML = convertTime(current)
-        }, 1000);
+            document.getElementById("starting").innerHTML = convertTime(current);
+            if (Math.floor(audio.currentTime) == Math.floor(audio.duration)) {
+                pause();
+            }
+        }, 100);
         audio.play();
         play_button.style.backgroundImage = "url('images/pause.svg')"
     }
@@ -59,6 +62,7 @@
             var totalPosition = document.getElementById("streamline").offsetWidth;
             var seekingTime = audio.duration * (position / totalPosition);
             audio.currentTime = seekingTime;
+
         }
     }
 
@@ -70,4 +74,10 @@
         }
 
         return minutes + ":" + seconds;
+    }
+
+
+
+    function logout() {
+        window.location.href = "index.html";
     }
