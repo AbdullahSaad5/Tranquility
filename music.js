@@ -45,13 +45,13 @@
 
 
     function skip() {
-        audio.paused = true;
-        play_pause();
+        audio.currentTime = 0;
+        play();
     }
 
     function revert() {
-        audio.paused = true;
-        play_pause();
+        audio.currentTime = 0;
+        play();
     }
 
 

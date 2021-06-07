@@ -58,6 +58,12 @@ body {
     font-weight: bold;
 }
 
+
+#buttons button:hover {
+    background-image: linear-gradient(to right, #0088ff94, #0b8dc996);
+
+}
+
 #buttons button:first-child {
     margin-bottom: 1rem;
 }
@@ -119,11 +125,6 @@ p {
     height: 5px;
     background-color: red;
     border-radius: 10px;
-    /* animation: move linear forwards;
-    -ms-animation: move linear forwards;
-    -moz-animation: move linear forwards;
-    -webkit-animation: move linear forwards;
-    animation-play-state: paused; */
 }
 
 #music-control {
@@ -179,6 +180,16 @@ p {
     align-items: center;
 }
 
+#music-control div:hover {
+    width: 55px;
+    height: 55px;
+}
+
+
+#other-control div:hover {
+    width: 40px;
+    height: 40px;
+}
 
 #download {
     background-image: url(../images/download.svg);
@@ -277,14 +288,3 @@ p {
         -moz-transform: rotate(359deg);
     }
 }
-
-
-/* @keyframes move {
-    from {
-        width: 0px;
-    }
-
-    to {
-        width: 100%;
-    }
-} */
