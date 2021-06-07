@@ -119,11 +119,11 @@ p {
     height: 5px;
     background-color: red;
     border-radius: 10px;
-    animation: move linear forwards;
+    /* animation: move linear forwards;
     -ms-animation: move linear forwards;
     -moz-animation: move linear forwards;
     -webkit-animation: move linear forwards;
-    animation-play-state: paused;
+    animation-play-state: paused; */
 }
 
 #music-control {
@@ -275,7 +275,7 @@ p {
 }
 
 
-@keyframes move {
+/* @keyframes move {
     from {
         width: 0px;
     }
@@ -283,4 +283,4 @@ p {
     to {
         width: 100%;
     }
-}
+} */

@@ -1,6 +1,3 @@
-    if (!logged_in) {
-        window.location.href = "index.html";
-    }
     var audio = new Audio('Thoughts.mp3');
     var play_button;
 
@@ -27,6 +24,9 @@
         setInterval(function () {
             var current = audio.currentTime;
             document.getElementById("starting").innerHTML = convertTime(current);
+
+            renderAnimation();
+
             if (Math.floor(audio.currentTime) == Math.floor(audio.duration)) {
                 pause();
             }
@@ -80,4 +80,11 @@
 
     function logout() {
         window.location.href = "index.html";
+    }
+
+
+    function renderAnimation() {
+        var render = document.getElementById("render");
+        width = Math.ceil((audio.currentTime / audio.duration) * document.getElementById("streamline").offsetWidth);
+        render.style.width = `${width}px`;
     }
