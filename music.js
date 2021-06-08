@@ -1,4 +1,4 @@
-var songs = ["Ajj Din Vehre Vich.mp3", "Brown Munday.mp3", "Darasal.mp3", "Dekhte Dekhte.mp3", "Dil Diyan Gallan.mp3", "Hasan Raheem.mp3", "Ishq Nachaunda.mp3", "Jaan-E-Bahaaraan.mp3", "Jeena Jeena (From _Badlapur_).mp3", "Never Gonna Give You Up.mp3", "Rockstar.mp3", "Tajdar-E-Haram Coke Studio Season 8.mp3"];
+var songs = ["Brown Munday.mp3", "Never Gonna Give You Up.mp3", "Rockstar.mp3"];
 var current_song = 0;
 var audio = new Audio("./Music/" + songs[current_song]);
 var play_button = document.querySelector('#play');
