@@ -1,3 +1,5 @@
+var logged_in = false;
+
 function getCredentials() {
     var email = document.getElementById("email").value;
     var password = document.getElementById("password").value;
@@ -12,4 +14,5 @@ function getCredentials() {
         // alert("Invalid Username or Password");
         swal("Error!", "Invalid Username or Password", "error");
     }
+    export default logged_in;
 }
