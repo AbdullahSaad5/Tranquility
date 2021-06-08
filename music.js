@@ -137,6 +137,8 @@ function renderAnimation() {
 
 function displaySearchWindow() {
     document.getElementById("searching").style.display = "flex";
+    document.getElementById("search-box").value = "";
+    document.getElementById("search-box").focus();
 }
 
 
