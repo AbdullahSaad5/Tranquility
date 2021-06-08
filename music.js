@@ -3,6 +3,7 @@ var current_song = 0;
 var audio = new Audio("./Music/" + songs[current_song]);
 var play_button = document.querySelector('#play');
 var indexes = new Array();
+var repeat_enabled = false;
 
 
 
@@ -63,8 +64,11 @@ function play_song() {
         var current = audio.currentTime;
         document.getElementById("starting").innerHTML = convertTime(current);
         renderAnimation();
-        if (audio.ended) {
+        if (audio.ended && !repeat_enabled) {
             skip();
+        }
+        else if (repeat_enabled && audio.ended) {
+            play_song();
         }
     }, 100);
     audio.play();
@@ -108,6 +112,18 @@ function seek() {
         var seekingTime = audio.duration * (position / totalPosition);
         audio.currentTime = seekingTime;
 
+    }
+}
+
+
+function loop() {
+    if (repeat_enabled) {
+        document.getElementById("repeat").style.backgroundImage = "url('images/loop.svg')"
+        repeat_enabled = false;
+    }
+    else {
+        document.getElementById("repeat").style.backgroundImage = "url('images/loop-enabled.svg')"
+        repeat_enabled = true;
     }
 }
 

@@ -128,7 +128,7 @@ p {
 }
 
 #music-control {
-    width: 20%;
+    width: 30%;
     height: 8vh;
     display: flex;
     justify-content: space-around;
@@ -167,6 +167,16 @@ p {
     background-size: contain;
     background-repeat: no-repeat;
 
+
+}
+
+
+#repeat {
+    background-image: url(../images/loop.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    right: 0;
 }
 
 #other-control {
