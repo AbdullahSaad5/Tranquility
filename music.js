@@ -2,7 +2,42 @@ var songs = ["Brown Munday.mp3", "Never Gonna Give You Up.mp3", "Rockstar.mp3"];
 var current_song = 0;
 var audio = new Audio("./Music/" + songs[current_song]);
 var play_button = document.querySelector('#play');
+var indexes = new Array();
 
+
+
+function search() {
+    hideSearch();
+    var query = document.getElementById("search-box").value;
+    var song = -1;
+    for (let i = 0; i < songs.length; i++) {
+        var name = songs[i].replace(".mp3", "")
+        if (name.toUpperCase() == query.toUpperCase()) {
+            song = i;
+            break;
+        }
+        indexes[i] = name.split(" ");
+
+    }
+    for (let i = 0; i < indexes.length; i++) {
+        for (let j = 0; j < indexes[i].length; j++) {
+            if (indexes[i][j].toUpperCase() == query.toUpperCase()) {
+                song = i;
+            }
+        }
+    }
+
+    if (song != -1) {
+        audio.src = "./Music/" + songs[song];
+        loadData();
+        play_song();
+        swal("Song Found!", `Now Playing ${songs[song]}`, "success")
+    }
+    else {
+        swal("Song Not Found!", "", "error")
+
+    }
+}
 function loadData() {
     var song_name = audio.src.split('/');
     song_name = song_name[song_name.length - 1];
@@ -50,7 +85,7 @@ function skip() {
     current_song %= songs.length;
     audio.src = "./Music/" + songs[current_song];
     loadData();
-    play_pause();
+    play_song();
 }
 
 function revert() {
@@ -60,7 +95,7 @@ function revert() {
     }
     audio.src = "./Music/" + songs[current_song];
     loadData();
-    play_pause()
+    play_song();
 
 }
 
@@ -97,4 +132,14 @@ function renderAnimation() {
     var render = document.getElementById("render");
     width = Math.ceil((audio.currentTime / audio.duration) * document.getElementById("streamline").offsetWidth);
     render.style.width = `${width}px`;
+}
+
+
+function displaySearchWindow() {
+    document.getElementById("searching").style.display = "flex";
+}
+
+
+function hideSearch() {
+    document.getElementById("searching").style.display = "none";
 }
