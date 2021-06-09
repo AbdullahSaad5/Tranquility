@@ -300,6 +300,17 @@ p {
         width: 45%;
     }
 
+    #music-control div:hover {
+        width: 40px;
+        height: 40px;
+    }
+
+
+    #other-control div:hover {
+        width: 40px;
+        height: 40px;
+    }
+
     #other-control {
         width: 15%;
         margin-right: 5rem;
