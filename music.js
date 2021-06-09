@@ -1,6 +1,6 @@
 var songs = ["Brown Munday.mp3", "Never Gonna Give You Up.mp3", "Rockstar.mp3"];
 var current_song = 0;
-var audio = new Audio("./Music/" + songs[1]);
+var audio = new Audio("./Music/" + songs[current_song]);
 
 var play_button = document.querySelector('#play');
 
