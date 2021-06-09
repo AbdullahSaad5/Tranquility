@@ -1,4 +1,4 @@
-var songs = ["Brown Munday.mp3", "Never Gonna Give You Up.mp3", "Rockstar.mp3"];
+var songs = ["Interstellar Main Theme.mp3", "Lost But Won.mp3", "Time (Inception).mp3"];
 var current_song = 0;
 var audio = new Audio("./Music/" + songs[current_song]);
 
@@ -35,6 +35,7 @@ function play_song() {
         var current = audio.currentTime;
         document.getElementById("starting").innerHTML = convertTime(current);
         renderAnimation();
+        document.querySelector('#ending').innerHTML = convertTime(audio.duration);
         if (audio.ended && !repeat_enabled) {
             skip();
         }
