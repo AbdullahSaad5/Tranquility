@@ -174,7 +174,7 @@ function hide() {
 
 
 function search() {
-    hideSearch();
+    hide();
     var query = document.getElementById("search-box").value;
     var song = -1;
     for (let i = 0; i < songs.length; i++) {
