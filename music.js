@@ -129,8 +129,34 @@ function displaySearchWindow() {
 }
 
 
-function hideSearch() {
+function displayTimerWindow() {
+    document.getElementById("sleeptimer").style.display = "flex";
+    document.getElementById("sleeptimer").value = "";
+    document.getElementById("sleeptimer").focus();
+}
+
+
+function setTimer() {
+    document.getElementById("sleeptimer").style.display = "none";
+    loadData();
+    play_song();
+    var time = document.getElementById("sleeptimer").value;
+    var timerID = setInterval(function () {
+        if (time <= 0) {
+            pause_song();
+            clearInterval(timerID);
+        }
+        else {
+            time--;
+        }
+    }, 60000)
+}
+
+
+function hide() {
     document.getElementById("searching").style.display = "none";
+    document.getElementById("sleeptimer").style.display = "none";
+
 }
 
 

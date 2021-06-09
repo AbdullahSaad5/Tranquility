@@ -33,7 +33,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 15vh;
+    height: 100px;
 }
 
 #buttons {
@@ -41,20 +41,20 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     margin-right: 4rem;
 }
 
 
 #buttons button {
-    width: 150px;
-    height: 35px;
+    width: 120px;
+    height: 25px;
     border-radius: 50px;
     outline: none;
     color: white;
     background-image: linear-gradient(to right, #0089ff, #0b8dc9);
     border: 0;
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: bold;
 }
 
@@ -64,9 +64,6 @@ body {
 
 }
 
-#buttons button:first-child {
-    margin-bottom: 1rem;
-}
 
 #player {
     display: flex;
@@ -227,9 +224,10 @@ p {
     display: none;
     /* positioning */
     position: absolute;
-    top: 30vh;
+    top: 33vh;
 
 }
+
 
 #searching #exit {
     width: 25px;
@@ -264,6 +262,59 @@ p {
     outline: 0
 }
 
+
+#sleeptimer {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 300px;
+    width: 30%;
+    height: 200px;
+    background-image: linear-gradient(to right, #0088ff, #0b8dc9);
+    border-radius: 20px;
+    /* positioning */
+    position: absolute;
+    top: 33vh;
+
+}
+
+#sleeptimer input {
+    text-align: center;
+    font-size: 1rem;
+    width: 60%;
+    height: 30px;
+    border-radius: 7px;
+    outline: 0;
+    padding: 15px;
+}
+
+
+#sleeptimer #exit {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    background-image: url(../images/cross.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+#sleeptimer label {
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem
+}
+
+
+#time-button {
+    margin-top: 1.5rem;
+    width: 40%;
+    height: 30px;
+    outline: 0
+}
+
 @media all and (max-width: 900px),
 (orientation: portrait) {
 
@@ -273,11 +324,11 @@ p {
     }
 
     #buttons button {
-        width: 120px;
-        height: 30px;
+        width: 100px;
+        height: 20px;
         font-size: 0.8rem;
-        font-weight: normal;
     }
+
 
 
     #buttons {
@@ -333,6 +384,11 @@ p {
     #song-name p {
         margin-left: 10%;
         font-size: 1rem;
+    }
+
+    #other-control {
+        width: 25%;
+        margin-right: 0rem;
     }
 }
 
