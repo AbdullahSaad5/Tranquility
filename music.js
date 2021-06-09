@@ -7,45 +7,16 @@ var repeat_enabled = false;
 
 
 
-function search() {
-    hideSearch();
-    var query = document.getElementById("search-box").value;
-    var song = -1;
-    for (let i = 0; i < songs.length; i++) {
-        var name = songs[i].replace(".mp3", "")
-        if (name.toUpperCase() == query.toUpperCase()) {
-            song = i;
-            break;
-        }
-        indexes[i] = name.split(" ");
 
-    }
-    for (let i = 0; i < indexes.length; i++) {
-        for (let j = 0; j < indexes[i].length; j++) {
-            if (indexes[i][j].toUpperCase() == query.toUpperCase()) {
-                song = i;
-            }
-        }
-    }
-
-    if (song != -1) {
-        audio.src = "./Music/" + songs[song];
-        loadData();
-        play_song();
-        swal("Song Found!", `Now Playing ${songs[song]}`, "success")
-    }
-    else {
-        swal("Song Not Found!", "", "error")
-
-    }
-}
 function loadData() {
     var song_name = audio.src.split('/');
     song_name = song_name[song_name.length - 1];
     song_name = song_name.split(".");
     song_name[0].replace("%20%", " ");
     document.querySelector("#song-name p").innerHTML = song_name[0].replaceAll("%20", " ");
-    document.querySelector('#ending').innerHTML = convertTime(audio.duration);
+    audio.onloadedmetadata = function () {
+        document.querySelector('#ending').innerHTML = convertTime(audio.duration);
+    };
 }
 
 function play_pause() {
@@ -160,4 +131,38 @@ function displaySearchWindow() {
 
 function hideSearch() {
     document.getElementById("searching").style.display = "none";
+}
+
+
+function search() {
+    hideSearch();
+    var query = document.getElementById("search-box").value;
+    var song = -1;
+    for (let i = 0; i < songs.length; i++) {
+        var name = songs[i].replace(".mp3", "")
+        if (name.toUpperCase() == query.toUpperCase()) {
+            song = i;
+            break;
+        }
+        indexes[i] = name.split(" ");
+
+    }
+    for (let i = 0; i < indexes.length; i++) {
+        for (let j = 0; j < indexes[i].length; j++) {
+            if (indexes[i][j].toUpperCase() == query.toUpperCase()) {
+                song = i;
+            }
+        }
+    }
+
+    if (song != -1) {
+        audio.src = "./Music/" + songs[song];
+        loadData();
+        play_song();
+        swal("Song Found!", `Now Playing ${songs[song]}`, "success")
+    }
+    else {
+        swal("Song Not Found!", "", "error")
+
+    }
 }
