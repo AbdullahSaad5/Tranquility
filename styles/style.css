@@ -14,6 +14,7 @@ body {
 
 #gradient {
     height: 30vh;
+    min-height: 150px;
     background-image: linear-gradient(to right, rgba(38, 166, 154, 0.85), rgba(13, 71, 161, 0.85));
     display: flex;
     align-items: center;
@@ -46,10 +47,12 @@ body {
 }
 
 #signIn-details {
-    margin: 50px;
+    margin-top: 10vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-height: 250px;
+
 }
 
 

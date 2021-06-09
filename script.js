@@ -3,7 +3,7 @@ function getCredentials() {
     var password = document.getElementById("password").value;
 
     if (email == "test@test.com" && password == "test123") {
-        swal("Success!", "Click OK to continue!", "success").then(function () {
+        swal("Logged In!", "Click OK to continue!", "success").then(function () {
             window.location.href = "music.html";
         });
     } else {

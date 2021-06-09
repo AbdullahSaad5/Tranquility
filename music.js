@@ -1,11 +1,11 @@
 var songs = ["Brown Munday.mp3", "Never Gonna Give You Up.mp3", "Rockstar.mp3"];
 var current_song = 0;
-var audio = new Audio("./Music/" + songs[current_song]);
+var audio = new Audio("./Music/" + songs[1]);
+
 var play_button = document.querySelector('#play');
+
 var indexes = new Array();
 var repeat_enabled = false;
-
-
 
 
 function loadData() {
@@ -20,12 +20,12 @@ function loadData() {
 }
 
 function play_pause() {
+    loadData();
     if (!audio.paused) {
         pause_song();
     } else {
         play_song();
     }
-    loadData();
 }
 
 function play_song() {
