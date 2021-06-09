@@ -8,6 +8,18 @@ var indexes = new Array();
 var repeat_enabled = false;
 
 
+document.addEventListener('keyup', event => {
+    if (event.code === 'Space') {
+        play_pause();
+    }
+    else if (event.code === 'ArrowLeft') {
+        audio.currentTime -= 5;
+    }
+    else if (event.code === 'ArrowRight') {
+        audio.currentTime += 5;
+    }
+});
+
 function loadData() {
     var song_name = audio.src.split('/');
     song_name = song_name[song_name.length - 1];
