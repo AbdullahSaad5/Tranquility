@@ -179,21 +179,11 @@ function search() {
     var song = -1;
     for (let i = 0; i < songs.length; i++) {
         var name = songs[i].replace(".mp3", "")
-        if (name.toUpperCase() == query.toUpperCase()) {
+        if (name.toUpperCase().includes(query.toUpperCase())) {
             song = i;
             break;
         }
-        indexes[i] = name.split(" ");
-
     }
-    for (let i = 0; i < indexes.length; i++) {
-        for (let j = 0; j < indexes[i].length; j++) {
-            if (indexes[i][j].toUpperCase() == query.toUpperCase()) {
-                song = i;
-            }
-        }
-    }
-
     if (song != -1) {
         audio.src = "./Music/" + songs[song];
         loadData();
