@@ -16,9 +16,9 @@
     <div id="header">
         <h1 id="logo">Tranquility</h1>
         <div id="buttons">
-            <button onclick="logout()">Logout</button>
-            <button onclick="displaySearchWindow()">Search Song</button>
-            <button onclick="displayTimerWindow()">Sleep Timer</button>
+            <button id="logout">Logout</button>
+            <button id="search">Search Song</button>
+            <button id="timer">Sleep Timer</button>
 
         </div>
     </div>
@@ -30,32 +30,32 @@
         </div>
         <div id="songtime">
             <p id="starting">0:00</p>
-            <div id="streamline" onclick="seek()">
+            <div id="streamline">
                 <div id="render"></div>
             </div>
             <p id="ending">0:00</p>
         </div>
         <div id="music-control">
-            <div id="revert" onclick="revert()"></div>
-            <div id="play" onclick="play_pause()"></div>
-            <div id="skip" onclick="skip()"></div>
-            <div id="repeat" onclick="loop()"></div>
+            <div id="revert"></div>
+            <div id="play"></div>
+            <div id="skip"></div>
+            <div id="repeat"></div>
         </div>
         <div id="other-control">
             <div id="favorite"></div>
             <div id="download"></div>
         </div>
         <div id="searching">
-            <div id="exit" onclick="hide()"></div>
+            <div class="exit"></div>
             <label for="search-box">Enter Your Song Name</label>
             <input type="text" id="search-box" placeholder="Your Query Here">
-            <button id="search-button" onclick="search()">Search</button>
+            <button id="search-button">Search</button>
         </div>
-        <div id="sleeptimer">
-            <div id="exit" onclick="hide()"></div>
+        <div id="sleep-timer">
+            <div class="exit"></div>
             <label for="time-box">Enter Time</label>
             <input type="number" id="time" placeholder="Time in Minutes" min="0">
-            <button id="time-button" onclick="setTimer()">Set Timer</button>
+            <button id="time-button">Set Timer</button>
         </div>
     </div>
     <script src="music.js"></script>
